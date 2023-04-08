@@ -1,0 +1,22 @@
+{% extends '__layout.html' %}
+
+
+
+{% block content %}
+<ul class="list-unstyled">
+    {% for post in posts %}
+    <li>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">{{ post.author.name }}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{ post.author.age }}</h6>
+              <p class="card-text">{{ post.text }}<p>{{ post.date }}</p></p>
+              <!-- <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a> -->
+            </div>
+          </div>
+    </li>
+    
+    {% endfor %}
+</ul>
+{% endblock %}
